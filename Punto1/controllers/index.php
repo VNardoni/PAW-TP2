@@ -29,18 +29,13 @@ if ($app->request->method == "POST") {
     //Validacion fecha de nacimiento
     $fechaDeHoy = date('Y-m-d');    
     if ($nacimiento > $fechaDeHoy) {
-        $errores['errorFechaNacimiento'] = "La fecha ingresada es futura a la de hoy.";
+        $errores['errorFechaNacimiento'] = "La fecha de nacimiento es futura a la de hoy.";
     }
     
     //Validacion fecha de turno
     if ($fechaturno < $fechaDeHoy) {
-        echo "La fecha ingresada ya paso.";
-        $errores['errorFechaTurno'] = "La fecha ingresada ya paso.";
-    } else {
-        echo "Fecha rango correcta";
-    }
-    
-    
+        $errores['errorFechaTurno'] = "La fecha del turno ya paso.";
+    } 
     
 }
 
