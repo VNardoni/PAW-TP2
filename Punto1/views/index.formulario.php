@@ -1,6 +1,6 @@
-<h1>FORMULARIO DE CONSULTA MEDICA</h1>
+<h1 class="h1Formulario">FORMULARIO DE CONSULTA MEDICA</h1>
     
-    <form name="Formulario" method="post">
+    <form name="formulario" method="post">
         <label for="nombre">Nombre:</label> 
         <input type="text" name="nombre" required><br>
         

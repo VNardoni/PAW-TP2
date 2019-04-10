@@ -9,10 +9,45 @@ header, main {
   padding: 10px;
 }
 
+input {
+    border: 1px dotted #999;
+    border-radius: 0;
+    
+    -webkit-appearance: none;
+    
+}
+
+form {
+    
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  padding: 15px;
+}
+
+button, input, select {
+    font-family: monospace;
+    font-size: 100%;
+}
+
+button {
+    border-radius: 5px;
+}
+
+input, select, button {
+        
+    width : 150px;
+    margin: 0;
+
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+}
+
 h1 {
     text-align: center;
-    font-family: "Verdana"; 
+    font-family: "Tahoma"; 
 }
+
 
 /* Nav styles */
 
