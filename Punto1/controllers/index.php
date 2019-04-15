@@ -14,35 +14,46 @@ if ($app->request->method == "POST") {
     $fechaturno = $_POST["fechaturno"];
     $horaturno = $_POST["horaturno"];
 
+    
+ 
+   
+    
     $errores = array();
+    
     
     //Validacion Nombre
     if (!preg_match("/^[A-Za-z\\- \']+$/",$nombre)) {
         $errores['errorNombre'] = "El nombre ingresado no es valido.";
+      
     }
     
     //Validacion mail con funcion filter_var()
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errores['errorEmail'] = "Formato invalido para un email.";
+    
     }
     
     //Validacion fecha de nacimiento
     $fechaDeHoy = date('Y-m-d');    
     if ($nacimiento > $fechaDeHoy) {
         $errores['errorFechaNacimiento'] = "La fecha de nacimiento es futura a la de hoy.";
+    
     }
     
     //Validacion fecha de turno
     if ($fechaturno < $fechaDeHoy) {
         $errores['errorFechaTurno'] = "La fecha del turno ya paso.";
+
     } 
     
-}
+}  
+
+
+
+
 
 //Invoco la vista
 
 require 'views/index.view.php';
-
-
 
 ?>
