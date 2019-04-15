@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TURNO</title>
+     <link href="<?= statics('main.css') ?>" rel="stylesheet" type="text/css">
+    <title>TURNO-ej2</title>
 </head>
-
 <body>
     <h1>RESUMEN</h1>
      <form name="resumen">

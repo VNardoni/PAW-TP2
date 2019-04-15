@@ -8,11 +8,9 @@
 <body>
 <main>
     <?php 
- if($_POST){
-    require 'ejercicio2/index.resumen.php';
-        }else{
+        
             require 'index.formulario.php'; 
-       }
+     
     ?>
     
     <!-- Si hubeo errores -->
