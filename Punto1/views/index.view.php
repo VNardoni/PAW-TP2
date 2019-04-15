@@ -9,7 +9,7 @@
 <main>
     <?php 
  if($_POST){
-    require 'TP2/index.resumen.php';
+    require 'ejercicio2/index.resumen.php';
         }else{
             require 'index.formulario.php'; 
        }
