@@ -1,6 +1,6 @@
 <h1 class="h1Formulario">FORMULARIO DE CONSULTA MEDICA</h1>
     
-    <form name="formulario" method="post" >
+    <form name="formulario" method="post">
         <label for="nombre">Nombre:</label> 
         <input type="text" name="nombre" required><br>
         
@@ -34,10 +34,10 @@
         <label for="fechaturno">Fecha del Turno:</label>
         <input type="date" name="fechaturno" required><br>
         
-        <label for="horaturno">Hora del Turno:</label>
-        <input type="time" name="horaturno" value="08:00" min="08:00" max="17:00" step="900"><br>
+        <label for="horaturno">Hora del Turno</label>
+        <input type="time" name="horaturno" value="8:00" min="8:00" max="17:00" step="900"><br>
         
         
-        <button type="submit"  >Enviar</button> 
-        <button type="reset">Limpiar</button>
+        <button type="submit" name="submit">Enviar</button> 
+        <button type="reset" name="reset">Limpiar</button>
     </form>
