@@ -7,9 +7,15 @@
 </head>
 <body>
 <main>
-    <?php require 'index.formulario.php' ?>
+  <?php if ($_POST){
+     require 'index.resultado.php' ;
+}else{
+    require 'index.formulario.php' ;
+    }
+    ?>
+     
     
-    <?php require 'index.resultado.php' ?>
+    
 </main>
 </body>
 </html>
