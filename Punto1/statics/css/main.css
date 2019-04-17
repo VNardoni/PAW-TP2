@@ -10,7 +10,7 @@ header, main {
 }
 
 input {
-    border: 5px dotted #999;
+    border: 1px dotted #999;
     border-radius: 0;
     box-sizing: border-box;
     -webkit-appearance: none;
