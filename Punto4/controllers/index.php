@@ -1,6 +1,6 @@
 <?php
 
-$title = 'TP2 - Ejercicio 2';
+$title = 'TP2 - Ejercicio 4';
 
 if ($app->request->method == "POST") {
     $nombre = $_POST["nombre"];
@@ -28,6 +28,7 @@ if ($app->request->method == "POST") {
     $datos['fechaturno'] = $fechaturno;
     $datos['horaturno'] = $horaturno;
     
+    
     //Validacion Nombre
     if (!preg_match("/^[A-Za-z\\- \']+$/",$nombre)) {
         $errores['errorNombre'] = "El nombre ingresado no es valido.";
@@ -49,6 +50,11 @@ if ($app->request->method == "POST") {
         $errores['errorFechaTurno'] = "La fecha del turno ya paso.";
     } 
     
+
+
+
+
+require 'upload.php';
 }
 
 //Invoco la vista
