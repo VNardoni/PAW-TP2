@@ -53,12 +53,9 @@ if ($app->request->method == "POST") {
 
 //Invoco la vista
 
-//if ($_POST){
-  //  require 'views/index.resultado.php'
-//}
-//else{
+
 require 'views/index.view.php';
-//}
+
 
 
 ?>
