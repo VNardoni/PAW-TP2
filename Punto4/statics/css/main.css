@@ -9,6 +9,12 @@ header, main {
   padding: 10px;
 }
 
+section .datos {
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  padding: 15px;
+}
+
 input {
     border: 1px dotted #999;
     border-radius: 0;

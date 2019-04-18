@@ -1,7 +1,19 @@
-<body>
-        <h1>RESUMEN</h1>
-        <form name="resumen">
+<h1>RESUMEN</h1>
 
+        <!-- Si hubo errores > Muestra vector errores; SINO > Muestra datos. -->
+        <?php if (!empty($errores)): ?>
+        <section class="errores">
+            <h3>Error en la carga del formulario</h3>
+            <li>
+                <?php foreach ($errores as $tipoError => $error): ?>
+                <ol><?= $error ?></ol>
+
+                <?php endforeach; ?>
+            </li>
+        <?php elseif (empty($errores)): ?>
+        </section>
+        <!--SINO MUESTRO DATOS. -->
+        <section class="datos">
             <label for="nombre">Nombre:</label>
             <?php echo $_POST["nombre"]; ?>
             <br>
@@ -32,31 +44,11 @@
             <?php echo $_POST["fechaturno"];?>
             <br>
             <label for="horaturno">Hora del Turno:</label>
+
+
             <?php echo $_POST["horaturno"];?>
-                <?php  print_r($_FILES);?>
-             <?php echo $_FILES['diagnostico']['name'];?>
-        </form>
-
-
-    </body>
-
-     
-      
-       
-         <!-- Si hubo errores > Muestra vector errores; SINO > Muestra datos. -->
-    <?php if (!empty($errores)): ?>
-        <section id="errores">
-            <h3>Error en la carga del formulario</h3>
-            <li>
-            <?php foreach ($errores as $tipoError => $error): ?>
-                <ol><?= $error ?></ol>
             
-            <?php endforeach; ?>
-            </li>
-        </section> 
-    <?php else: 
-            foreach($datos as $tipoDato => $dato):
-                echo $tipoDato.": "." ".$dato."<br/>";
-            endforeach;
-        endif;
-    ?> 
+            
+            
+        <?php endif; ?>    
+        </section>    

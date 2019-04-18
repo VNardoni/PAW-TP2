@@ -26,14 +26,10 @@ if ($_FILES['diagnostico']['size']>200000) {
 }
 
 if (move_uploaded_file($_FILES['diagnostico']["tmp_name"], $target_dir)) {
-        echo "El archivo ". basename($_FILES['diagnostico']['name']). " se subio correctamente"."<br/>";
-        echo "<img src='controllers/uploads/$file_name' >"."<br/>";
-        echo $subirArchivo."<br/>";
-        echo $imageFileType."<br/>";
-        echo $_FILES['diagnostico']['type'];
-        echo $_FILES['diagnostico']['size'];
-    } else {
+       $viewImage = "<img src='controllers/uploads/$file_name' >";
+        require 'views/index.resultado.php';
+} else {
         echo $mensaje_error;    
-    } 
+} 
 
 ?>
