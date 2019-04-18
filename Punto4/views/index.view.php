@@ -7,18 +7,13 @@
     </head>
     <body>
         <main>
-            <?php 
-    if($_POST){
-   
-    require 'index.resultado.php';
-    }else{
-      
-   require 'index.formulario.php'; 
-        
-    }
-
-            ?>
-           
+        <?php 
+            if($_POST){
+                require 'index.resultado.php';
+            }else{
+                require 'index.formulario.php'; 
+            }
+        ?>
         </main>
     </body>
 </html>

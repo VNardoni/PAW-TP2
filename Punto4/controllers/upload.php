@@ -1,47 +1,39 @@
 <?php
 //if($_POST)
 //{
-$target_dir = "/uploads/";
+$target_dir = "controllers/uploads/";
 
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    
+$target_dir = $target_dir . basename($_FILES['diagnostico']['name']);
+$file_name = $_FILES['diagnostico']['name'];
+$subirArchivo = "true";
+$mensaje_error = "";
+$imageFileType = strtolower(pathinfo($target_dir, PATHINFO_EXTENSION));
 
-//chequeo que la imagen no exista
-    if (file_exists($target_file)) {
-    echo "La imagen ya existe";
-    $uploadOk = 0;
-    }
-    
-    // chequeo el tamaño de la imagen
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "La imagen supera el tamaño maximo.";
-    $uploadOk = 0;
+/*
+if (!($_FILES['diagnostico']['type'] == "image/pjpg" OR $_FILES['diagnostico']['type'] == "image/png")) {
+    $mensaje_error = "ARCHIVO INVALIDO. -> Tu archivo tiene que ser JPG o GIF.";
+    $subirarchivo = "false";
 }
-    // chequeo el formato de la imagen
-    
-    if($imageFileType != "jpg" && $imageFileType != "png") {
-    echo "Solo se aceptan imagenes png o jpg";
-    $uploadOk = 0;
+*/
+// VALIDO TIPO DE IMAGEN
+if (!($imageFileType == "jpg" OR $imageFileType == "png")) {
+    $mensaje_error = $mensaje_error . "- ARCHIVO INVALIDO. -> Tu archivo tiene que ser JPG o GIF.<BR>";
 }
-    
-    
-    // chequeo si hubo algun error
-if ($uploadOk == 0) {
-    echo "La imagen no pudo ser cargada";
-// si todo esta okintento subir la imagen
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " La imagen ha sido cargada.";
+
+// VALIDO TAMAÑO DE IMAGEN
+if ($_FILES['diagnostico']['size']>200000) {
+    $mensaje_error = $mensaje_error . "El archivo es mayor que 200KB, debes reduzcirlo antes de subirlo.<BR>";
+}
+
+if (move_uploaded_file($_FILES['diagnostico']["tmp_name"], $target_dir)) {
+        echo "El archivo ". basename($_FILES['diagnostico']['name']). " se subio correctamente"."<br/>";
+        echo "<img src='controllers/uploads/$file_name' >"."<br/>";
+        echo $subirArchivo."<br/>";
+        echo $imageFileType."<br/>";
+        echo $_FILES['diagnostico']['type'];
+        echo $_FILES['diagnostico']['size'];
     } else {
-        echo "Hubo un error al cargar el archivo.";
-    }
-}
-   echo "<img src='img/$nombreArchivo'>";
+        echo $mensaje_error;    
+    } 
 
-   //$info['diagnostiico'] = "<img src=". $targetFile." height=200 width=300 />";
-
-
-//}
 ?>

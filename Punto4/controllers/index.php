@@ -50,10 +50,6 @@ if ($app->request->method == "POST") {
         $errores['errorFechaTurno'] = "La fecha del turno ya paso.";
     } 
     
-
-
-
-
 require 'upload.php';
 }
 

@@ -40,14 +40,10 @@
     
 <br>
 
-
-
-
- <label for="diagnostico">Diagnostico: </label>
-<input type="file" name="diagnostico" id="fileToUpload">
- 
-  <br>
- <button type="submit" name="submit">Enviar</button> 
+    <label for="diagnostico">Diagnostico: </label>
+    <input type="file" name="diagnostico" id="fileToUpload" accept="image/jpeg, .jpg, image/png"><br>
+    
+    <button type="submit" name="submit">Enviar</button> 
     <button type="reset" name="reset">Limpiar</button>
 
 

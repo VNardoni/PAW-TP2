@@ -1,5 +1,4 @@
-   
-    <body>
+<body>
         <h1>RESUMEN</h1>
         <form name="resumen">
 
@@ -33,10 +32,8 @@
             <?php echo $_POST["fechaturno"];?>
             <br>
             <label for="horaturno">Hora del Turno:</label>
-
-
             <?php echo $_POST["horaturno"];?>
-                    <?php  print_r($_FILES);?>
+                <?php  print_r($_FILES);?>
              <?php echo $_FILES['diagnostico']['name'];?>
         </form>
 

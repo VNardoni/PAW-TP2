@@ -1,7 +1,20 @@
-<body>
-        <h1>RESUMEN</h1>
-        <form name="resumen">
 
+        <h1>RESUMEN</h1>
+
+        <!-- Si hubo errores > Muestra vector errores; SINO > Muestra datos. -->
+        <?php if (!empty($errores)): ?>
+        <section class="errores">
+            <h3>Error en la carga del formulario</h3>
+            <li>
+                <?php foreach ($errores as $tipoError => $error): ?>
+                <ol><?= $error ?></ol>
+
+                <?php endforeach; ?>
+            </li>
+        <?php elseif (empty($errores)): ?>
+        </section>
+        <!--SINO MUESTRO DATOS. -->
+        <section class="datos">
             <label for="nombre">Nombre:</label>
             <?php echo $_POST["nombre"]; ?>
             <br>
@@ -35,38 +48,10 @@
 
 
             <?php echo $_POST["horaturno"];?>
-        </form>
-
-
-    </body>
-
-
-
-        <!-- Si hubo errores > Muestra vector errores; SINO > Muestra datos. -->
-        <?php if (!empty($errores)): ?>
-        <section id="errores">
-            <h3>Error en la carga del formulario</h3>
-            <li>
-                <?php foreach ($errores as $tipoError => $error): ?>
-                <ol><?= $error ?></ol>
-
-                <?php endforeach; ?>
             
             
-            </li>
-           <?php endif;?>
-        </section> 
-        
-       
-     
-    
+            
+        <?php endif; ?>    
+        </section>    
         
     
-
-        
-
-
-
-
-
-
