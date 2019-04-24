@@ -13,7 +13,7 @@
         <label for="edad">Edad:</label> 
         <input type="number" min="1" max="120" id="edad" name="edad" required><br>
         
-        <label for"calzado">Talla de Calzado:</label> 
+        <label for="calzado">Talla de Calzado:</label> 
         <input type="number" name="calzado" value="20" min="20" max="45" id="c1"><br>
         
         <label for="altura">Altura:</label>
