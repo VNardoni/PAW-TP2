@@ -13,7 +13,8 @@
 <?php elseif (empty($errores)): ?>
     </section> 
 <!-- SINO MUESTRO DATOS. -->     
-    <section class="datos">    
+    <section class="datos"> 
+        <?php var_dump($errores) ?>
         <label for="nombre">Nombre:</label>
         <?php echo $_POST["nombre"]; ?> <br>
 
@@ -42,7 +43,7 @@
         <?php echo $_POST["fechaturno"];?> <br>
         
         <label for="horaturno">Hora del Turno:</label>
-        <?php echo $_POST["horaturno"];?>
+        <?php echo $_POST["horaturno"];?> <br>
         
         <?php echo $viewImage ?>
             

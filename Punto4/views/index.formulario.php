@@ -1,6 +1,6 @@
 <h1 class="h1Formulario">FORMULARIO DE CONSULTA MEDICA</h1>
 
-<form  name="formulario"  action='upload' method='POST' enctype='multipart/form-data'>
+<form  name="formulario"  action='save' method='POST' enctype='multipart/form-data'>
     <label for="nombre">Nombre:</label> 
     <input type="text" name="nombre" required><br>
 

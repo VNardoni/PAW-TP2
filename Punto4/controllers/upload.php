@@ -1,6 +1,4 @@
 <?php
-//if($_POST)
-//{
 $target_dir = "controllers/uploads/";
 
 $target_dir = $target_dir . basename($_FILES['diagnostico']['name']);
