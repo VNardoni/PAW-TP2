@@ -19,15 +19,12 @@
                     
                  echo "<p class='advertencia'> $error </p>"; 
                 }
-               echo "<h4>Intentelo nuevamente!!!!</h4><br>";
+               echo "<h4>Intentelo nuevamente!</h4><br>";
                
                 }
             ?>
            
-
-        
-
-       
+    
         <form name="formulario" method="post" action="chequearEjercicio" oninput="valorAltura.value = altura.valueAsNumber" enctype="multipart/form-data">
             <label for="nombre">*Nombre: </label>
             <input type="text" name="nombre" value="" maxlength="50" placeholder="Nombre" pattern="[A-Za-z\s]+" title="Solo se admiten letras minúsculas,mayúsculas y espacios" required>
@@ -70,7 +67,7 @@
             
 
             <label for="imagen">Diagnóstico</label>
-			<input type="file" name="imagen">
+			<input type="file" name="imagen"><br>
 
             <input class="boton" type="submit" value="Enviar" name="Enviar">
             <input type="reset" value="Limpiar">

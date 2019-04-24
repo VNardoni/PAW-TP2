@@ -13,10 +13,6 @@ if ($app->request->method == "POST") {
     $colorpelo = $_POST["colorpelo"];
     $fechaturno = $_POST["fechaturno"];
     $horaturno = $_POST["horaturno"];
-
-    
- 
-   
     
     $errores = array();
     

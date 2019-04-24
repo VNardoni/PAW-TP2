@@ -7,15 +7,9 @@ $subirArchivo = "true";
 $mensaje_error = "";
 $imageFileType = strtolower(pathinfo($target_dir, PATHINFO_EXTENSION));
 
-/*
-if (!($_FILES['diagnostico']['type'] == "image/pjpg" OR $_FILES['diagnostico']['type'] == "image/png")) {
-    $mensaje_error = "ARCHIVO INVALIDO. -> Tu archivo tiene que ser JPG o GIF.";
-    $subirarchivo = "false";
-}
-*/
 // VALIDO TIPO DE IMAGEN
 if (!($imageFileType == "jpg" OR $imageFileType == "png")) {
-    $mensaje_error = $mensaje_error . "- ARCHIVO INVALIDO. -> Tu archivo tiene que ser JPG o GIF.<BR>";
+    $mensaje_error = $mensaje_error . "- ARCHIVO INVALIDO. -> Tu archivo tiene que ser JPG o PNG.<BR>";
 }
 
 // VALIDO TAMAÑO DE IMAGEN

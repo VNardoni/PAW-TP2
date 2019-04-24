@@ -1,6 +1,5 @@
 <h1>RESUMEN</h1>
-  
-       
+    
          <!-- Si hubo errores > Muestra vector errores; SINO > Muestra datos. -->
 <?php if (!empty($errores)): ?>
     <section class="errores">
@@ -14,7 +13,6 @@
     </section> 
 <!-- SINO MUESTRO DATOS. -->     
     <section class="datos"> 
-        <?php var_dump($errores) ?>
         <label for="nombre">Nombre:</label>
         <?php echo $_POST["nombre"]; ?> <br>
 

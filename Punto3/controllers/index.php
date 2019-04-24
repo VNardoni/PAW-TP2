@@ -1,8 +1,6 @@
 <?php
 
-$title = 'TP2 - Ejercicio 3
-
-';
+$title = 'TP2 - Ejercicio 3';
 
 if ($app->request->method == "GET") {
     $nombre = $_GET["nombre"];
@@ -17,18 +15,6 @@ if ($app->request->method == "GET") {
     $horaturno = $_GET["horaturno"];
 
     $errores = array();
-    $datos = array ();
-    
-    $datos['nombre'] = $nombre;
-    $datos['email'] = $email;
-    $datos['telefono'] = $telefono;
-    $datos['edad'] = $edad;
-    $datos['calzado'] = $calzado;
-    $datos['altura'] = $altura;
-    $datos['nacimiento'] = $nacimiento;
-    $datos['colorpelo'] = $colorpelo;
-    $datos['fechaturno'] = $fechaturno;
-    $datos['horaturno'] = $horaturno;
     
     //Validacion Nombre
     if (!preg_match("/^[A-Za-z\\- \']+$/",$nombre)) {
